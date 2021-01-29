@@ -7,8 +7,9 @@ class PostsController < ApplicationController
   end
   
   def create
-    post.create(content: parms[:content])
+    Post.create(content: params[:content])
   end
+
   def checked
     post = Post.find(params[:id])
     if post.checked 
